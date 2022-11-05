@@ -4,7 +4,7 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 
 sequalize = require('./config/connection');
-const SequalizeStore = require('connect=session-sequalize')(session.Store);
+const SequelizeStore = require('connect=session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;

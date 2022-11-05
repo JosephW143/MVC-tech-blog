@@ -7,6 +7,24 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephW143/MVC-tech-blog.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosephW143/MVC-tech-blog/issues"
+  },
+  "homepage": "https://github.com/JosephW143/MVC-tech-blog#readme",
+  "dependencies": {
+    "sequelize": "^6.25.3",
+    "mysql2": "^2.3.3",
+    "express": "^4.17.3",
+    "express-handlebars": "6.0.6",
+    "express-session": "1.17.3",
+    "dotenv": "16.0.3",
+    "connect-session-sequelize": "^7.1.2",
+    "bcrypt": "5.0.1"
+  }
 }
