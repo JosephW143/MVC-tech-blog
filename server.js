@@ -3,7 +3,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 
-sequalize = require('./config/connection');
+sequelize = require('./config/connection');
 const SequelizeStore = require('connect=session-sequelize')(session.Store);
 
 const app = express();
@@ -14,8 +14,8 @@ const sess = {
     cookie: {},
     resave: false,
     saveUninitialized: true,
-    store: new SequalizeStore({
-        db: sequalize
+    store: new SequelizeStore({
+        db: sequelize
     })
 };
 
@@ -30,6 +30,6 @@ app.set('view engine', 'handlebars');
 const hbs = exphbs.create({ helpers });
 const helpers = require('./utils/helpers');
 
-sequalize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now Listening!'));
 });
